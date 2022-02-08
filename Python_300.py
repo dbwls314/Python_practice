@@ -157,3 +157,61 @@ data = "   삼성전자    "
 print("출력결과 :", data.strip())
 print(data)
 
+print("-"*20)
+# 41 upper 메서드 -> 대문자 변경
+print("-"*20)
+ticker = "btc_krw"
+print("upper() :", ticker.upper())
+
+print("-"*20)
+# 42 lower 메서드 -> 소문자 변경
+ticker = "BTC_KRW"
+print("lower() :", ticker.lower())
+
+print("-"*20)
+# 43 capitalize 메서드 -> 'hello'있다면, 'Hello'로 변경
+# capitalize란? : 문자열 첫글자 대문자, 나머지 소문자 변환
+word = 'hello'
+print(word.capitalize())
+
+print("-"*20)
+# 44 endswith 메서드 -> 파일 이름이 'xlsx'로 끝나는지 확인
+# 문자열 중 특정 문자 찾기, 특정문자 시작하는 문자열, 특정문자로 끝나는 문자열 찾는 방법
+# 1) find(찾을 문자, 찾기 시작할 위치) : 위치 없는 경우, -1 반환
+# 2) startswith(시작하는 문자, 시작 지점) : Bloon 값으로 반환
+# 3) endswith(끝나는 문자, 문자열 시작, 문자열 끝) : : Bloon 값으로 반환
+file_name = "보고서.xlsx"
+print(file_name.endswith('xlsx')) # True
+
+print("-"*20)
+# 45 endswith 메서드 -> 파일 이름이 'xls' or 'xlsx'로 끝나는지 확인
+print(file_name.endswith(('xls','xlsx'))) # True
+# print(file_name.endswith('xls','xlsx')) # TypeError: slice indices must be integers or None or have an __index__ method
+
+print("-"*20)
+# 46 startwith 메서드 -> 파일 이름 '2020' 시작하는지 화긴
+file_name = "2020_보고서.xlsx"
+print(file_name.startswith('2020')) # True
+
+print("-"*20)
+# 47 split 메서드
+a = "hello world"
+print(a.split(' ')) # ['hello', 'world']
+
+print("-"*20)
+# 48 split 메서드 -> btc와 krw로 나누기
+ticker = "btc_krw"
+print(ticker.split('_')) # ['btc', 'krw']
+
+print("-"*20)
+# 49 split 메서드 -> 년도, 월, 일 나누가
+date = "2020-05-01"
+print(date.split('-')) # date = "2020-05-01"
+
+print("-"*20)
+# 50 rstrip 메서드 -> 오른쪽 공백 제거
+data = "039490     "
+data = data.rstrip()
+print("공백제거 후 :", data)
+print(data.rstrip(" "))
+
