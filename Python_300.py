@@ -96,4 +96,64 @@ string = 'abcd'
 string.replace('b', 'B')
 print('string :', string) # 'aBcd(X), abcd(O)
 
+print("-"*20)
+#31 문자열 합치기
+a = "3"
+b = "4"
+print("a + b :",a + b) # 34
+
+print("-"*20)
+#32 문자열 곱하기
+print("hi" * 3) # hihihi
+
+print("-"*20)
+#33 문자열 곱하기 -> '-' 80번 출력하기
+print("- 80번 출력 결과 :",'-' * 80)
+
+print("-"*20)
+#34 문자열 곱하기 -> 더하기와 곱하기 이용해서 출력결과 : 'python java python java python java python java'처럼 출력하기
+t1 = 'python'
+t2 = 'java'
+
+result = t1 + " " + t2 + " "
+print("출력결과 :", result * 4) # 정답
+print("출력결과 :", ((t1 + " " + t2) + " ") * 4) # 내가 푼 정답
+
+print("-"*20)
+# 35 문자열 출력 -> % formatting을 사용하여, 출력결과 : '이름: 김민수 나이: 10/n 이름: 이철희 나이: 13'
+name1 = "김민수" 
+age1 = 10
+name2 = "이철희"
+age2 = 13
+
+print("이름: %s 나이: %d" % (name1, age1)) # 정답
+print("이름: %s 나이: %d" % (name2, age2))
+print(f"이름: {name1} 나이: {age1}") # 내가 푼 정답
+
+print("-"*20)
+# 36 문자열 출력 -> formate() 메서드 사용해서 35번 다시 풀기
+print("이름: {} 나이: {}".format(name1, age1))
+print("이름: {} 나이: {}".format(name2, age2))
+
+print("-"*20)
+# 37 문자열 출력 -> f-string 사용해서 35번 다시 풀기
+print(f"이름: {name1} 나이: {age1}") # 내가 푼 정답
+
+print("-"*20)
+# 38 컴마제거하기 -> 컴마 제거 후, 정수로 변환
+상장주식수 = "5,969,782,550"
+coma_remove = 상장주식수.replace(',',"")
+print("컴마제거 결과 :", coma_remove)
+print("정수변환 결과 :", int(coma_remove))
+
+print("-"*20)
+# 39 문자열 슬라이싱 -> 출력결과: '2020/03'
+분기 = "2020/03(E) (IFRS연결)"
+print("출력결과 :", 분기[:7])
+
+print("-"*20)
+# 40 strip 메서드 -> 좌우 공백 제거
+data = "   삼성전자    "
+print("출력결과 :", data.strip())
+print(data)
 
