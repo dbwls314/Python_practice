@@ -215,3 +215,121 @@ data = data.rstrip()
 print("공백제거 후 :", data)
 print(data.rstrip(" "))
 
+print("-"*20)
+# 51 리스트 생성
+movie_rank = ["닥터 스트레인지", "스플릿", "럭키"]
+print(movie_rank) # ['닥터 스트레인지', '스플릿', '럭키']
+
+print("-"*20)
+# 52 리스트 원소 추가
+movie_rank.append("배트맨")
+print("movie_rank 원소추가:", movie_rank) # ['닥터 스트레인지', '스플릿', '럭키', '배트맨']
+
+print("-"*20)
+# 53 리스트의 "슈퍼맨"을 "닥터 스트레인지"와 "스플릿" 사이에 추가하기
+movie_rank.insert(1, "슈퍼맨")
+print("movie_rank에 '슈퍼맨' 추가 :", movie_rank) # ['닥터 스트레인지', '슈퍼맨', '스플릿', '럭키', '배트맨']
+
+# 문자열 사이에 원하는 값 추가 : insert(위치할 인덱스, 추가시킬 값)
+
+print("-"*20)
+# 54 리스트에서 "럭키" 삭제
+print(movie_rank)
+del movie_rank[3]
+print("movie_rank에서 '럭키' 삭제 :", movie_rank) # ['닥터 스트레인지', '슈퍼맨', '스플릿', '배트맨']
+
+print("-"*20)
+# 55 리스트에서 '스플릿' 과 '배트맨'을 를 삭제
+print(movie_rank)
+del movie_rank[2:]
+print("movie_rank에서 '스플릿'&'배트맨' 삭제 ", movie_rank) # ['닥터 스트레인지', '슈퍼맨']
+
+print("-"*20)
+# 56 lang1과 lang2의 원소를 모두 갖고 있는 langs 리스트를 만들기 = 리스트 합치기
+lang1 = ["C", "C++", "JAVA"]
+lang2 = ["Python", "Go", "C#"]
+
+langs = lang1 + lang2
+print("lang1 + lang2 :", langs)
+
+print("-"*20)
+# 57 최댓값, 최솟값
+nums = [1, 2, 3, 4, 5, 6, 7]
+
+print("최댓값 :", max(nums))
+print("최솟값 :", min(nums))
+
+print("-"*20)
+# 58 리스트 합
+nums = [1, 2, 3, 4, 5]
+
+print("리스트 합 :", sum(nums))
+
+print("-"*20)
+# 59 데이터 갯수 구하기
+cook = ["피자", "김밥", "만두", "양념치킨", "족발", "피자", "김치만두", "쫄면", "소시지", "라면", "팥빙수", "김치전"]
+
+print("리스트 갯수 :", len(cook))
+
+# 갯수 세기 종류 
+# 1) count() : list명.count(찾고자 하는 요소)
+# 2) len() : list 내의 전체 요소 갯수 = 총 길이
+
+print("-"*20)
+# 60 평균 
+nums = [1, 2, 3, 4, 5]
+
+print("평균 :", sum(nums) / len(nums))
+
+# 평균구하는 방법 총 4가지 : for 반복문, sum 함수, numpy 모듈이용, statiscics 라이브러리 이용
+
+print("-"*20)
+# 61 -> 날짜 제외, 가격만 출력
+price = ['20180728', 100, 130, 140, 150, 160, 170]
+print("price 가격만 :", price[1:])
+
+print("-"*20)
+# 62 -> 슬라이싱 홀수 출력
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("홀수 출력 :", nums[::2])
+
+print("-"*20)
+# 63 -> 슬라이싱 짝수 출력
+print("짝수 출력 :", nums[1::2])
+
+print("-"*20)
+# 64 -> 슬라이싱 사용한, 리스트 역방향 출력
+nums = [1, 2, 3, 4, 5]
+print("역방향 :", nums[::-1])
+
+print("-"*20) 
+# 65 -> 출력 값 : 삼성전자 Naver
+interest = ['삼성전자', 'LG전자', 'Naver']
+print(interest[0], interest[2])
+
+print("-"*20) 
+# 66 -> 출력 값 : 삼성전자 LG전자 Naver SK하이닉스 미래에셋대우
+interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
+print(" ".join(interest))
+
+print("-"*20) 
+# 67 -> 삼성전자/LG전자/Naver/SK하이닉스/미래에셋대우
+print("/".join(interest))
+
+print("-"*20) 
+# 68 -> join 메서드
+print("\n".join(interest))
+
+print("-"*20)
+# 69 -> split 메서드
+string = "삼성전자/LG전자/Naver"
+print("'/'구분 :", string.split("/"))
+
+print("-"*20)
+# 70 -> 리스트 오름차순 정렬
+data = [2, 4, 3, 1, 5, 10, 9]
+data.sort()
+print(data)
+
+# list.sort() : list 오름차순 정렬 / list 멤버 함수(메서드) / list 자체 정렬
+# list.sorted)() : 새로운 정렬된 list 반환
