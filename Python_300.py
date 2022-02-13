@@ -516,10 +516,12 @@ print("new_procdut 병합된 dict :", icecream)
 print("new_product :", new_product)
 
 # 방법2
-print("union(|) 연산자 이용 :", icecream | new_product)
+# print("union(|) 연산자 이용 :", icecream | new_product)
 
 # 방법3
 from copy import deepcopy
+from datetime import datetime
+from posixpath import split
 a = deepcopy(icecream)
 a.update(new_product)
 print("deepcopy참조 :", a)
@@ -538,3 +540,358 @@ close_price = [10500, 10300, 10100, 10800, 11000]
 
 close_table = zip(date, close_price)
 print("close_table :", dict(close_table))
+
+# 파이썬 분기ans
+print("-"*20)
+# 101 -> True False 타입
+print(type(True)) # bool
+print(type(False)) # bool
+
+print("-"*20)
+# 102 
+print(3 == 5) # False
+
+print("-"*20)
+# 103 
+print(3 < 5) # True
+
+print("-"*20)
+# 104 
+x = 4
+print(1 < x < 5) # True
+
+print("-"*20)
+# 105 
+print ((3 == 3) and (4 != 3)) # T and T => True
+
+print("-"*20)
+# 106 
+'''
+print(3 => 4) # 에러발생이유 : >= 부등호 위치(지원하지 않는 연산자)
+'''
+
+print("-"*20)
+# 107 
+if 4 < 3:
+    print("Hello World")
+
+'''
+실행결과 : 아무것도 출력되지 않는다.
+        왜? 조건식이 '참'일경우에만, "Hello World"가 출력되기 때문
+'''
+
+print("-"*20)
+# 108 
+if 4 < 3:
+    print("Hello World.")
+else:
+    print("Hi, there.")
+
+'''
+실행결과 : Hi, there. 출력 
+        왜? 4 < 3이 참이 아니므로, else 조건문 실행되기 때문
+'''
+
+print("-"*20)
+# 109
+if True :
+    print ("1")
+    print ("2")
+else :
+    print("3")
+print("4")
+
+'''
+실행결과 : 
+1 
+2
+4
+로 출력
+왜? 항상 True는 참이고, if절이 끝나면 마지막으로 print("4") 실행되므로
+'''
+
+print("-"*20)
+# 110
+if True :
+    if False:
+        print("1")
+        print("2")
+    else:
+        print("3")
+else :
+    print("4")
+print("5")
+
+'''
+실행결과 : 
+3
+5
+로 출력
+왜? 첫번째 if문에서 True 조건식은 항상 참이므로, 두번째 if문을 실행한다.
+두번째 if문에서 False 조건식은 항상 참이 아니므로, else 실행하여 print("3")출력
+2개의 if문 끝나면 마지막 print("5") 실행됨
+'''
+
+# print("-"*20)
+# 111 -> 입력받은 문자열 두번 출력
+# print(input("문자를 입력하세요 :") * 2)
+
+# print("-"*20)
+# 112 -> 입력받은 숫자에 10더하기
+# print(int(input("숫자를 입력하세요 :")) + 10)
+
+# print("-"*20)
+# 113 -> 입력받은 숫자 홀짝 판별
+# num = int(input("숫자하나를 입력하세요 : "))
+
+# if num % 2 == 0:
+#     print("짝수")
+# if num & 2 == 1:
+#     print("홀수")
+
+# print("-"*20)
+# 114 -> 입력받은 값 + 20 출력 ==> 255초과시 255출력
+# num = int(input("숫자를 입력하세요 : ")) + 20
+
+# 내가 작성한 코드 
+# if num <= 255:
+#     print("num은", num)
+# if num + 20 > 255:
+#     print(255)
+
+# 답
+# if num > 255:
+#     print(255)
+# else:
+#     print(num)
+
+# print("-"*20)
+# 115 -> 입력받은 값 - 20 / 0 < 출력범위 < 255 / 출력값 < 0 : 0출력 , 출력값 > 255 : 255출력
+# num = int(input("숫자를 입력하세요2 :")) - 20
+
+# if num < 0:
+#     print(0)
+# if num > 255:
+#     print(255)
+# if 0 < num < 255:
+#     print(num)
+
+# print("-"*20)
+# 116 -> 시간정각 여부 판별 
+# time = datetime(input("현재시간: "))
+
+# if time[-2:] == "00":
+#     print("정각 입니다.")
+# else:
+#     print("정각이 아닙니다.")
+
+# print("-"*20)
+# 117 -> 입력받은 단어가 리스트내에 fruit 포함여부 출력
+# fruit = ["사과", "포도", "홍시"]
+# input_fruit = input("좋아하는 과일읍? :")
+
+# if input_fruit in fruit:
+#     print("정답입니다.")
+# else:
+#     print("오답입니다.")
+
+# print("-"*20)
+# 118 -> 입력받은 종목명이 투자 경고 종목 리스트 포함여부 출력
+# warn_investment_list = ["Microsoft", "Google", "Naver", "Kakao", "SAMSUNG", "LG"]
+# input_warn_investment_list = input("종목명을 입력하세요 :") 
+
+# if input_warn_investment_list in warn_investment_list:
+#     print("투자 경고 종목입니다.")
+# else:
+#     print("투자 경고 종목이 아닙니다.")
+
+# print("-"*20)
+# 119 -> 입력받은 값이 딕셔너리 key값 포함여부 출력
+# fruit = {"봄" : "딸기", "여름" : "토마토", "가을" : "사과"}
+# input_fruit = input("제가 좋아하는 계절은")
+
+# # 내가 입력한 코드
+# if input_fruit in list(fruit.keys()):
+#     print("정답입니다.")
+# else:
+#     print("오답입니다.")
+
+# # 답
+# if input_fruit in fruit:
+#     print("정답입니다.")
+# else:
+#     print("오답입니다.")
+
+# print("-"*20)
+# 120 -> 입력받은 값이 딕셔너리 value값 포함여부 출력
+# input_fruit = input("제가 좋아하는 과일은")
+# if input_fruit in list(fruit.values()):
+#     print("정답입니다.")
+# else:
+#     print("오답입니다.")
+
+# print("-"*20)
+# 121 -> 입력받은 문자 하나가 소문자일경우 대문자로, 대문자일경우 소문자로 출력
+# input_string = input("영어 한개 입력 :")
+
+# # 내가 입력한 코드
+# if input_string == input_string.lower():
+#     print(input_string.upper())
+# if input_string == input_string.upper():
+#     print(input_string.lower())
+
+# # 답
+# if input_string.islower():
+#     print(input_string.upper())
+# else:
+#     print(input_string.lower())
+
+# print("-"*20)
+# 122 -> 입력받은 스코어 학점 출력
+# input_score = int(input("점수 입력 :"))
+
+# if input_score >= 81:
+#     print("grade is A")
+# elif input_score >= 61:
+#     print("grade is B")
+# elif input_score >= 41:
+#     print("grade is C")
+# elif input_score >= 21:
+#     print("grade is D")
+# elif input_score >= 0:
+#     print("grade is E")
+
+# print("-"*20)
+# 123 
+# 통화명 = {
+#     "달러" : 1167,
+#     "엔" : 1.096,
+#     "유로" : 1268,
+#     "위안" : 171
+# }
+
+# input_data = input("입력 : ")
+# data_list = input_data.split()
+# # float함수 - 소수점 첫째자리
+# # print(1, float(data_list[0]) * 통화명[data_list[1]], "원")
+
+# # "{:.자릿수f}".format(실수) 함수 - 소수점 f자리수
+# data_num = float(data_list[0])
+# data_num_환율 = data_num * 통화명[data_list[1]]
+# print("방법1 :", "{:.2f}".format(data_num_환율), "원")
+# print("방법2 :", format(data_num_환율, ".2f"), "원")
+
+# print("-"*20)
+# 124 -> 입력받은 숫자 3개중 가장 큰숫자 출력
+# 방법1) list 이용
+# datas1 = [
+#     int(input("input_number1 :")),
+#     int(input("input_number2 :")),
+#     int(input("input_number3 :"))
+# ]
+# print(max(datas1))
+
+# # 방법2) dictionary 이용
+# datas2 = {
+#     "num1" : int(input("input_number1 :")),
+#     "num2" : int(input("input_number2 :")),
+#     "num3" : int(input("input_number3 :"))
+# }
+# result = list(datas2.values())
+# print(max(result))
+
+# # 방법3) 정답
+# num1 = int(input("input_number1 :")) 
+# num2 = int(input("input_number2 :"))
+# num3 = int(input("input_number3 :"))
+
+# if num1 >= num2 and num1 >= num3:
+#     print(num1)
+# elif num2 >= num1 and num2 >= num3:
+#     print(num2)
+# else:
+#     print(num3)
+
+# print("-"*20)
+# 125
+
+# 내가쓴답)
+# phone = {
+#     "011" : "SKT",
+#     "016" : "KT",
+#     "019" : "LGU",
+#     "010" : "알수없음"
+# }
+
+# input_data = input("휴대전화 번호 입력 :")
+# input_data_list = input_data.split("-")
+# phone_first_num = list(phone.keys())
+# phone_mid_num = phone[input_data_list[0]]
+
+# if input_data_list[0] in phone_first_num:
+#     print(f"당신은 {phone_mid_num} 사용자입니다.")
+
+# # 정답)
+# number = input("휴대전화 번호 입력 :")
+# number_first = number.split("-")[0]
+
+# if number_first == "011":
+#     service = "SKT"
+# elif number_first == "016":
+#     service = "KT"
+# elif number_first == "019":
+#     service = "LGU"
+# else:
+#     service = "알수없음"
+
+# print(f"당신은 {service} 사용자입니다.")
+
+# print("-"*20)
+# 126
+# input_data = input("우편번호 :")
+# gu= {
+#     "강북구":["010","011","012"], 
+#     "도봉구":["013","014","015"], 
+#     "노원구":["016","017","018","019"]
+# }
+# gue_num = list(gu.values())
+
+# if input_data[:3] in gue_num[0]: 
+#     print("강북구")
+# elif input_data[:3] in gue_num[1]: 
+#     print("도봉구")
+# elif input_data[:3] in gue_num[2]: 
+#     print("노원구")
+
+# print("-"*20)
+# 127 -> 입력받은 주민번호로 성별출력하기
+# input_data = input("주민등록번호 :")
+# num = input_data.split("-")[1] 
+
+# if (num[0] == '1') or (num[0] == '3'):
+#     print("남자")
+# elif (num[0] == '2') or (num[0] == '4'):
+#     print("여자")
+
+# print("-"*20)
+# 128
+# input_data = input("주민등록번호 :")
+# num = input_data.split("-")[1]
+
+# # 내가 쓴 답
+# if int(num[1]) == 0:
+#     if int(num[2]) in range(9):
+#         print("서울 입니다.")
+#     elif int(num[2]) == 9:
+#         print("서울이 아닙니다.")
+# elif int(num[1]) == 1:
+#     if int(num[2]) in range(1, 3):
+#         print("서울이 아닙니다.") 
+# elif int(num[1]) != 0 or int(num[1]) != 1:
+#     print("서울이 아닙니다.") 
+
+# # 정답
+# if 0 <= int(num[1:3]) <= 8:
+#     print("서울입니다.")
+# else:
+#     print("서울이 아닙니다.")
