@@ -520,6 +520,7 @@ print("new_product :", new_product)
 
 # 방법3
 from copy import deepcopy
+from dataclasses import replace
 from datetime import datetime
 from posixpath import split
 a = deepcopy(icecream)
@@ -895,3 +896,26 @@ print("5")
 #     print("서울입니다.")
 # else:
 #     print("서울이 아닙니다.")
+
+print("-"*20)
+# 129
+input_data = input("주민등록번호 :")
+a = input_data.replace("-", "")
+print(a)
+b = a[:-1]
+
+곱할수 = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5]
+c = []
+for i in range(len(곱할수)):
+    c.append(int(b[i]) * 곱할수[i])
+avg = sum(c) / 11
+result = 11 - avg
+
+# 리스트 컨프리헨션
+# c = [int(b[i]) * 곱할수[i] for i in range(len(곱할수))]
+
+if input_data[-1] == result:
+    print("유효한 주민등록번호입니다.")
+else:
+    print("유효하지 않은 주민등록번호입니다.")
+
