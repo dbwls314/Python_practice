@@ -897,25 +897,41 @@ print("5")
 # else:
 #     print("서울이 아닙니다.")
 
+# print("-"*20)
+# # 129
+# input_data = input("주민등록번호 :")
+# a = input_data.replace("-", "")
+# print(a)
+# b = a[:-1]
+
+# 곱할수 = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5]
+# c = []
+# for i in range(len(곱할수)):
+#     c.append(int(b[i]) * 곱할수[i])
+# avg = sum(c) / 11
+# result = 11 - avg
+
+# # 리스트 컨프리헨션
+# # c = [int(b[i]) * 곱할수[i] for i in range(len(곱할수))]
+
+# if input_data[-1] == result:
+#     print("유효한 주민등록번호입니다.")
+# else:
+#     print("유효하지 않은 주민등록번호입니다.")
+
 print("-"*20)
-# 129
-input_data = input("주민등록번호 :")
-a = input_data.replace("-", "")
-print(a)
-b = a[:-1]
+# 130 
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+'''
+m_n = 최고가 - 최저가 = btc('max_price') - btc('min_price')
+result = 시가 + 변동폭 = int(btc('opening_price')) - int(m_n)
+'''
 
-곱할수 = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5]
-c = []
-for i in range(len(곱할수)):
-    c.append(int(b[i]) * 곱할수[i])
-avg = sum(c) / 11
-result = 11 - avg
+m_n = int(btc['max_price']) - int(btc['min_price'])
+result = int(btc['opening_price']) - int(m_n)
 
-# 리스트 컨프리헨션
-# c = [int(b[i]) * 곱할수[i] for i in range(len(곱할수))]
-
-if input_data[-1] == result:
-    print("유효한 주민등록번호입니다.")
+if result > int(btc['max_price']):
+    print("상승장")
 else:
-    print("유효하지 않은 주민등록번호입니다.")
-
+    print("하락장")
