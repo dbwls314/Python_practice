@@ -1042,3 +1042,92 @@ print("-"*20)
 # 150
 for i in 리스트[::-1]:
     print(i)
+
+print("-"*20)
+# 151
+리스트 = [3, -20, -3, 44]
+
+for i in 리스트:
+    if i < 0:
+        print(i)
+
+print("-"*20)
+# 152
+리스트 = [3, 100, 23, 44]
+
+for i in 리스트:
+    if i % 3 == 0:
+        print(i)
+
+print("-"*20)
+# 153
+리스트 = [13, 21, 12, 14, 30, 18]
+
+for i in 리스트:
+    if i < 20 and i % 3 == 0:
+        print(i)
+
+print("-"*20)
+# 154
+리스트 = ["I", "study", "python", "language", "!"]
+
+for i in 리스트:
+    if len(i) >= 3:
+        print(i)
+
+print("-"*20)
+# 155
+리스트 = ["A", "b", "c", "D"]
+
+for i in 리스트:
+    if i.upper() == i:
+        print(i)
+
+print("-"*20)
+# 156
+리스트 = ["A", "b", "c", "D"]
+# 내가 쓴답
+for i in 리스트:
+    if i.upper() != i:
+        print(i)
+
+# 정답
+for i in 리스트:
+    if i.upper() == False:
+        print(i)
+
+
+print("-"*20)
+# 157
+리스트 = ['dog', 'cat', 'parrot']
+print(리스트[0][0].upper())
+print(리스트[0].upper())
+
+for i in 리스트:
+    print(i.replace(i[0], i[0].upper()))
+
+
+print("-"*20)
+# 158
+리스트 = ['hello.py', 'ex01.py', 'intro.hwp']
+for i in 리스트:
+    print(i.split(".")[0])
+
+
+print("-"*20)
+# 159
+리스트 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+
+for i in 리스트:
+  if i.split(".")[1][0] == "h":
+    print(i)
+
+print("-"*20)
+# 160
+리스트 = ['intra.h', 'intra.c', 'define.h', 'run.py']
+
+for i in 리스트:
+  a = i.split(".")[1][0]
+  if a == "h" or a == "c":
+    print(i)
+    
