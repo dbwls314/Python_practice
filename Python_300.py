@@ -983,3 +983,62 @@ print("-"*20)
 # 140
 for i in range(4):
     print("-------")
+
+print("-"*20)
+# 141 -> 부가세 10 포함한 가격 반환
+리스트 = [100, 200, 300]
+for i in 리스트:
+    print(i + 10)
+
+print("-"*20)
+# 142
+리스트 = ["김밥", "라면", "튀김"]
+for i in 리스트:
+    print("오늘의 메뉴:", i)
+
+print("-"*20)
+# 143 -> 문자열 길이 출력
+리스트 = ["SK하이닉스", "삼성전자", "LG전자"]
+for i in 리스트:
+    print(len(i))
+
+print("-"*20)
+# 144
+리스트 = ['dog', 'cat', 'parrot']
+for i in 리스트:
+    print(i, len(i))
+
+print("-"*20)
+# 145 -> 첫글자만 반환
+리스트 = ['dog', 'cat', 'parrot']
+for i in 리스트:
+    print(i[0])
+
+print("-"*20)
+# 146
+리스트 = [1, 2, 3]
+for i in range(len(리스트)):
+    print(리스트[2], 'x', 리스트[i])
+
+print("-"*20)
+# 147 
+리스트 = [1, 2, 3]
+for i in range(len(리스트)):
+    print(리스트[2], 'x', 리스트[i], '=', 리스트[2]*리스트[i])
+
+print("-"*20)
+# 148
+리스트 = ["가", "나", "다", "라"]
+for i in 리스트[1:]:
+    print(i)
+
+print("-"*20)
+# 149
+# 방법1)
+for i in 리스트[::2]:
+    print(i)
+
+print("-"*20)
+# 150
+for i in 리스트[::-1]:
+    print(i)
