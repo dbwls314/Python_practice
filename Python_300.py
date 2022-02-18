@@ -519,6 +519,7 @@ print("new_product :", new_product)
 # print("union(|) 연산자 이용 :", icecream | new_product)
 
 # 방법3
+from audioop import avg
 from copy import deepcopy
 from dataclasses import replace
 from datetime import datetime
@@ -1199,4 +1200,81 @@ num = 1
 for i in range(1, 10):
   num *= i
 print(num)
+
+print("-"*20)
+# 171
+price_list = [32100, 32150, 32000, 32500]
+
+for i in range(len(price_list)):
+  print(price_list[i])
+
+print("-"*20)
+# 172
+for i in range(len(price_list)):
+  print(i, price_list[i])
+
+print("-"*20)
+# 173
+# 정답
+for i in range(len(price_list)):
+    print(len(price_list) -1 -i, price_list[i])
+
+print("-"*20)
+# 174
+for i in range(1, len(price_list)):
+    print(90 + 10 * i, price_list[i])
   
+print("-"*20)
+# 175
+my_list = ["가", "나", "다", "라"]
+
+for i in range(1, len(my_list)): 
+    print(my_list[i-1], my_list[i])
+
+print("-"*20)
+# 176
+my_list = ["가", "나", "다", "라", "마"]
+
+for i in range(2, len(my_list)): 
+    print(my_list[i-2], my_list[i-1], my_list[i])
+
+print("-"*20)
+# 177
+my_list = ["가", "나", "다", "라"]
+
+for i in range(len(my_list)-1, 0, -1): 
+    print(my_list[i], my_list[i-1]) 
+
+# 178
+my_list = [100, 200, 400, 800]
+
+# 내가 푼것
+for i in range(1,len(my_list)): 
+    print(my_list[i] - my_list[i-1]) 
+
+# 179
+my_list = [100, 200, 400, 800, 1000, 1300]
+
+# 내가 쓴답
+for i in range(2, len(my_list)): #0,6) # 01,2,3,3,4.5
+    sum = my_list[i-2] + my_list[i-1] + my_list[i]
+    print(sum / 3)
+
+print("합계", (my_list[0] + my_list[1] + my_list[2])/3)
+print("합계", (my_list[1] + my_list[2] + my_list[3])/3)
+print("합계", (my_list[2] + my_list[3] + my_list[4])/3)
+print("합계", (my_list[3] + my_list[4] + my_list[5])/3)
+
+# 정답
+for i in range(1, len(my_list) - 1):
+    print(abs(my_list[i-1] + my_list[i] + my_list[i+1]) / 3)
+
+# 180
+low_prices  = [100, 200, 400, 800, 1000]
+high_prices = [150, 300, 430, 880, 1000]
+
+volatiltiy = []
+for i in range(len(low_prices)):
+    변동폭 = high_prices[i] - low_prices[i]
+    volatiltiy.append(변동폭)
+print(volatiltiy)
