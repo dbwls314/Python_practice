@@ -1130,4 +1130,73 @@ for i in 리스트:
   a = i.split(".")[1][0]
   if a == "h" or a == "c":
     print(i)
-    
+
+print("-"*20)
+# 161
+for i in range(100):
+  print(i)
+
+print("-"*20)
+# 162
+for i in range(2002,2051,4):
+  print(i)
+
+print("-"*20)
+# 163
+# 내가 쓴답
+for i in range(1, 31):
+  if i % 3 ==0:
+      print(i)
+
+# 정답
+for num in range(3, 31, 3):
+    print (num)
+
+print("-"*20)
+# 164
+for i in range(99, -1, -1):
+    print(i)
+
+print("-"*20)
+# 165 
+
+print("-"*20)
+# 166
+for i in [3]:
+    for j in range(1,10):
+        print(i,"x",j,"=",i*j)
+        
+print("-"*20)
+# 167
+# 내가 쓴답
+for i in [3]:
+    for j in range(1, 10):
+      if j % 2 == 1:
+        print(i,"x",j,"=",i*j)
+
+# 정답
+num = 3
+for i in range(1, 10, 2) :
+    print (num, "x", i, " = ", num * i)
+
+print("-"*20)
+# 168
+num = 0
+for i in range(1, 11):
+  num += i
+print(num)
+
+print("-"*20)
+# 169
+num = 0
+for i in range(1, 11, 2):
+  num += i
+print(num)
+
+print("-"*20)
+# 170
+num = 1
+for i in range(1, 10):
+  num *= i
+print(num)
+  
