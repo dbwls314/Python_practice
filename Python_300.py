@@ -922,20 +922,20 @@ print("5")
 
 print("-"*20)
 # 130 
-import requests
-btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
-'''
-m_n = 최고가 - 최저가 = btc('max_price') - btc('min_price')
-result = 시가 + 변동폭 = int(btc('opening_price')) - int(m_n)
-'''
+# import requests
+# btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+# '''
+# m_n = 최고가 - 최저가 = btc('max_price') - btc('min_price')
+# result = 시가 + 변동폭 = int(btc('opening_price')) - int(m_n)
+# '''
 
-m_n = int(btc['max_price']) - int(btc['min_price'])
-result = int(btc['opening_price']) - int(m_n)
+# m_n = int(btc['max_price']) - int(btc['min_price'])
+# result = int(btc['opening_price']) - int(m_n)
 
-if result > int(btc['max_price']):
-    print("상승장")
-else:
-    print("하락장")
+# if result > int(btc['max_price']):
+#     print("상승장")
+# else:
+#     print("하락장")
 
 print("-"*20)
 # 131 -> 결과 예측하기
@@ -1278,3 +1278,69 @@ for i in range(len(low_prices)):
     변동폭 = high_prices[i] - low_prices[i]
     volatiltiy.append(변동폭)
 print(volatiltiy)
+
+# 181
+apart = [[101, 102], [201, 202], [301, 302]]
+
+# 182
+stock = [[100, 80], [200,210], [300, 330]]
+
+# 183
+stock = {
+    "시가" : [100, 200, 300],
+    "종가" : [80, 210, 330]
+}
+
+# 184
+stock = {
+    "10/10" : [80, 110, 70, 90],
+    "10/11" : [210, 230, 190, 200]
+}
+
+# 185
+apart = [[101, 102], [201, 202], [301, 302]]
+
+for i in apart:
+    for j in i:
+        print(j, "호") 
+
+# 186
+# 내가 쓴답
+apart = [[101, 102], [201, 202], [301, 302]]
+
+apart.reverse()
+print(apart)
+
+for i in apart:
+    for j in i:
+        print(j, "호")
+
+# 정답
+apart = [[101, 102], [201, 202], [301, 302]]
+for i in apart[::-1]:
+    for j in i:
+        print(j, "호")
+
+# 187
+for i in apart[::-1]:
+    for j in i[::-1]:
+        print(j, "호")
+
+# 188
+
+for i in apart:
+    for j in i:
+        print(j, "호")
+        print("-----")
+
+# 189
+for i in apart:
+    for j in i:
+        print(j, "호")
+    print("-----")
+
+# 190
+for i in apart:
+    for j in i:
+        print(j, "호")
+print("-----")
