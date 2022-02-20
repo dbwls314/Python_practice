@@ -524,6 +524,7 @@ from copy import deepcopy
 from dataclasses import replace
 from datetime import datetime
 from posixpath import split
+import re
 a = deepcopy(icecream)
 a.update(new_product)
 print("deepcopy참조 :", a)
@@ -1257,8 +1258,8 @@ my_list = [100, 200, 400, 800, 1000, 1300]
 
 # 내가 쓴답
 for i in range(2, len(my_list)): #0,6) # 01,2,3,3,4.5
-    sum = my_list[i-2] + my_list[i-1] + my_list[i]
-    print(sum / 3)
+    sum1 = my_list[i-2] + my_list[i-1] + my_list[i]
+    print(sum1 / 3)
 
 print("합계", (my_list[0] + my_list[1] + my_list[2])/3)
 print("합계", (my_list[1] + my_list[2] + my_list[3])/3)
@@ -1344,3 +1345,86 @@ for i in apart:
     for j in i:
         print(j, "호")
 print("-----")
+
+# 191
+data = [
+    [ 2000,  3050,  2050,  1980],
+    [ 7500,  2050,  2050,  1980],
+    [15450, 15050, 15550, 14900]
+]
+
+for i in data:
+  for j in i:
+    print(j * 1.00014)
+
+# 192
+for i in data:
+  for j in i:
+    print(j * 1.00014)
+  print("---")
+
+# 193
+result = []
+for i in data:
+  for j in i:
+    result.append(j * 1.00014)
+print(result)
+
+result = [j * 1.00014 for i in data for j in i]
+print(result)
+
+# 194
+result = []
+for i in data:
+  a = []
+  for j in i:
+    a.append(j * 1.00014)
+  result.append(a)
+print(result)
+
+#195
+ohlc = [["open", "high", "low", "close"],
+        [100, 110, 70, 100],
+        [200, 210, 180, 190],
+        [300, 310, 300, 310]]
+
+for i in ohlc[1:]:
+  print(i[3])
+
+# 196
+for i in ohlc[1:]:
+  if i[3] > 150:
+    print(i[3])
+
+# 197
+for i in ohlc[1:]:
+  if i[3] > i[0] or i[3] == i[0]:
+    print(i[3])
+
+# 198
+volatility = []
+
+for i in ohlc[1:]:
+    volatility.append(i[1] - i[2])
+print(volatility)
+
+volatility = [i[1] - i[2] for i in ohlc[1:]]
+print(volatility)
+
+# 199
+# 종가(close) > 시가(open)
+for i in ohlc[1:]:
+    if i[3] > i[0]:
+        print(i[1] - i[2])
+
+# 정답
+for i in ohlc[1:]:
+    open, high, low, close  = i
+    if close > open:
+        print(high - low)
+
+# 200
+result = 0
+for i in ohlc[1:]:
+    result = result + (i[3] - i[0])
+print(111, result)
