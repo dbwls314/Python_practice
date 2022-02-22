@@ -75,7 +75,7 @@ a.pop('A')
 a.pop('C')
 print(a)
 
-# 정담
+# 정답
 result = a.pop('B') # pop으로 제거한 값을 변수에 할당
 print(result)
 
@@ -96,3 +96,84 @@ a = b = [1,2,3]
 a[1] = 4 
 print(a) # a[1,4,3]
 print(b) # a리스트와 동일하다
+
+#03 연습문제
+# 1 출력결과값 예상하기
+
+'''
+a = "Life is too short, you need python"
+
+if "wife" in a: print("wife")
+elif "python" in a and "you" not in a: print("python")
+elif "short" not in a: print("shirt")
+elif "need" in a: print("need")
+else: print("none")
+'''
+
+'''
+# 출력결과
+shirt
+
+그 이유 : if 와 elif는 조건이 참일 경우에만, 해당 출력값 출력후 구문 탈출!(그 다음 구문의 조건이 참이라고 한들)
+        즉, if 혹은 elif 조건이 거짓일 경우엔, 다음 elif 혹은 else 구문으로 넘어간다
+'''
+
+# 2
+# 내가 쓴답
+result = []
+num = 0
+while num < 1000:
+    if num % 3 == 0:
+        result.append(num)
+        num += 1
+    else:
+        num += 1
+print("Result :", sum(result))
+
+# 정답
+result = 0
+i = 1
+while i <= 1000:
+    if i % 3 == 0: 
+        result += i
+    i += 1
+
+print(result)
+
+# 3
+# 내가 쓴답
+i = 0
+while i != 6:
+    print("*" * i)
+    i += 1
+
+# 정답
+i = 0
+while True:
+    i += 1
+    if i > 5: break
+    print('*' * i)
+
+# 4
+# for i in range(1, 101):
+#     print(i)
+
+# 5 
+result_sum = 0
+A = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+for i in A:
+    result_sum += i
+print(result_sum / len(A))
+
+# 6
+'''
+numbers = [1, 2, 3, 4, 5]
+result = []
+for n in numbers:
+    if n % 2 == 1:
+        result.append(n*2)
+'''
+numbers = [1, 2, 3, 4, 5]
+
+result = [i * 2 for i in numbers if i % 2 == 1]
+print("result :", result)
