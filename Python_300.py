@@ -1428,3 +1428,134 @@ result = 0
 for i in ohlc[1:]:
     result = result + (i[3] - i[0])
 print(111, result)
+
+# 201 함수 정의하기
+def print_coin():
+    print("비트코인")
+
+# 202 정의한 함수 호출하기
+print_coin() 
+
+
+#203
+for i in range(100):
+    print_coin()
+
+# 204 함수 정의하기
+# 내가 쓴답
+def print_coins():
+    print("비트코인" * 100)
+
+# 정답
+def print_coins():
+    for i in range(100):
+        print("비트코인")
+
+print_coins() 
+
+# 205 에러 발생하는 이유
+'''
+hello()
+def hello():
+    print("Hi")
+
+# hello()함수가 정의되기 '전'에, 함수를 선언했기때문
+
+'''
+
+# 206
+'''
+def message() :
+    print("A")
+    print("B")
+
+message()
+print("C")
+message()
+
+# 출력예상결과
+A
+B
+C
+A
+B
+'''
+
+# 207
+'''
+print("A")
+
+def message() :
+    print("B")
+
+print("C")
+message()
+
+# 출력예상결과
+A
+C 
+B
+'''
+
+# 208
+'''
+print("A")
+def message1() :
+    print("B")
+print("C")
+def message2() :
+    print("D")
+message1()
+print("E")
+message2()
+
+# 출력예상결과
+A
+C
+B
+E
+D
+'''
+
+# 209
+'''
+def message1():
+    print("A")
+
+def message2():
+    print("B")
+    message1()
+
+message2()
+
+# 출력예상결과
+B
+A
+'''
+
+# 210
+'''
+def message1():
+    print("A")
+
+def message2():
+    print("B")
+
+def message3():
+    for i in range (3) :
+        message2()
+        print("C")
+    message1()
+
+message3()
+
+# 출력예상결과
+B
+C
+B
+C
+B
+C
+A
+'''
+
