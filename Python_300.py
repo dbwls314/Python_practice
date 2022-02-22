@@ -1559,3 +1559,73 @@ C
 A
 '''
 
+# 215
+
+def print_with_smile(문자열):
+  print(문자열, ":D")
+
+print_with_smile("안녕")
+
+#216
+print_with_smile("안녕하세요")
+
+# 217
+def print_upper_price(int):
+  print(int * 0.3)
+
+print_upper_price(30)
+
+#218
+# 내가쓴답
+def print_sum(inta, intb):
+  print(int(inta) + int(intb))
+
+print_sum(1,2)
+
+# 정답
+def print_sum (a, b) :
+    print (a + b)
+
+#219
+def print_arithmetic_operation(a, b):
+  print(a, "+", b, "=", a + b)
+  print(a, "-", b, "=", a - b)
+  print(a, "*", b, "=", a * b)
+  print(a, "/", b, "=", a / b)
+  
+print_arithmetic_operation(3, 4)
+
+# 220
+# 내가 쓴답
+def print_max(a, b, c):
+  if a > b and a > c:
+    print(a)
+  if b > a and b > c:
+    print(b)
+  if c > a and c > b:
+    print(c)
+    
+print_max(1,2,3)
+
+def print_max2(a, b, c):
+  input = [a, b, c]
+  max = a
+  for i in input:
+    if i > max:
+      max = i
+  print(max)
+
+print_max2(4, 5, 10)
+
+# 정답
+def print_max3(a, b, c):
+    result = 0
+    if a > result:
+        result = a
+    if b > result:
+        result = b
+    if c > result:
+        result = c
+    print(result)
+
+print_max3(10, 100, 200)
