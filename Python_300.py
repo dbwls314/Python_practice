@@ -1560,7 +1560,6 @@ A
 '''
 
 # 215
-
 def print_with_smile(문자열):
   print(문자열, ":D")
 
@@ -1629,3 +1628,114 @@ def print_max3(a, b, c):
     print(result)
 
 print_max3(10, 100, 200)
+
+# 221 
+def print_reverse(a):
+    b = list(a)
+    b.reverse()
+    print("".join(b))
+
+print_reverse("apple")
+
+def print_reverse1(a):
+    reverse_name = ''
+    for i in a:
+        reverse_name = i + reverse_name
+        print(reverse_name)
+
+print_reverse1("apple")
+
+def print_reverse2(a):
+    print(a[::-1])
+
+print_reverse2("apple")
+
+# 222
+def print_score(score):
+    print(sum(score) / len(score))
+
+print_score([1,2,3])
+
+print("-"*20)
+# 223
+def print_even(score):
+    for num in score:
+        if num % 2 == 0:
+            print(num)
+
+print_even([1, 3, 2, 10, 12, 11, 15])
+
+print("-"*20)
+# 224
+def print_keys(name_info):
+    keys = name_info.keys()
+    for key in keys:
+        print(key)
+
+print_keys ({"이름":"김말똥", "나이":30, "성별":0})
+
+print("-"*20)
+# 225
+my_dict = {"10/26" : [100, 130, 100, 100],
+           "10/27" : [10, 12, 10, 11]}
+
+def print_value_by_key(my_dict, date):
+    if date in my_dict:
+        print(my_dict[date])
+
+print_value_by_key(my_dict, "10/26")
+
+print("-"*20)
+# 226
+def print_5xn(string):
+    num = int(len(string) / 5) 
+    for i in range(num+1): 
+        print(string[i * 5: i * 5 + 5])
+
+print_5xn("아이엠어보이유알어걸일이삼사오육칠")
+
+print("-"*20)
+# 227
+def print_mxn(string, input_num):
+    num = int(len(string) / input_num)
+    print(num) # 3 range(3) => 0,1,2
+    for i in range(num + 1): # 0,1,2,3
+        print(string[i * input_num: i * input_num + input_num]) # 0:3 / 3:6 / # 6:9 / 12:15
+
+print_mxn("아이엠어보이유알어걸", 3)
+
+print("-"*20)
+# 228
+def calc_monthly_salary(annual_salary):
+    num = int(annual_salary / 12)
+    print(num)
+
+calc_monthly_salary(12000000)
+
+print("-"*20)
+# 229
+'''
+def my_print (a, b) :
+    print("왼쪽:", a)
+    print("오른쪽:", b)
+
+my_print(a=100, b=200)
+
+# 출력예상결과
+왼쪽: 100
+오른쪽: 200
+'''
+
+print("-"*20)
+# 230
+'''
+def my_print (a, b) :
+    print("왼쪽:", a)
+    print("오른쪽:", b)
+
+my_print(b=100, a=200)
+
+# 출력예상결과
+왼쪽: 200
+오른쪽: 100
+'''
