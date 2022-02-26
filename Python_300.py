@@ -1739,3 +1739,165 @@ my_print(b=100, a=200)
 왼쪽: 200
 오른쪽: 100
 '''
+
+print("-"*20)
+# 231
+'''
+def n_plus_1 (n) :
+    result = n + 1
+
+n_plus_1(3)
+print (result)
+
+# 출력예상결과
+4(틀림)
+에러나옴: NameError: name 'result' is not defined(정답)
+'''
+
+print("-"*20)
+# 232
+def make_url(string):
+    # return string
+    result = "www." + string + ".com"
+    return result
+
+print(make_url("naver"))
+
+print("-"*20)
+# 233
+# 내가 쓴답
+def make_list(string):
+    result = [i for i in string]
+    return result
+
+print(make_list("abcd"))
+
+# 정답
+def make_list1(string) :
+    return list(string)
+
+print(make_list1("abcd"))
+
+print("-"*20)
+# 234
+def pickup_even(num_list):
+    result = [i for i in num_list if i % 2 == 0]
+    return result
+
+print(pickup_even([3, 4, 5, 6, 7, 8]))
+
+print("-"*20)
+# 235
+def convert_int(num):
+    result = num.replace(",", "")
+    print(int(result), type(int(result)))
+
+convert_int("1,234,567")
+
+print("-"*20)
+# 236
+'''
+def 함수(num) :
+    return num + 4
+
+a = 함수(10)
+b = 함수(a)
+c = 함수(b)
+print(c)
+
+# 출력예상결과
+22
+
+# 과정
+a = 10 + 4 = 14
+b = 14 + 4 = 18
+c = 18 + 4 = 22
+'''
+
+print("-"*20)
+# 237
+'''
+def 함수(num) :
+    return num + 4
+
+c = 함수(함수(함수(10)))
+print(c)
+
+# 출력예상결과
+22
+'''
+
+print("-"*20)
+# 238
+'''
+def 함수1(num) :
+    return num + 4
+
+def 함수2(num) :
+    return num * 10
+
+a = 함수1(10)
+c = 함수2(a)
+print(c)
+
+# 출력예상결과
+140
+
+# 과정
+a = 10 + 4 = 14
+c = 14 * 10 = 140
+'''
+
+print("-"*20)
+# 239
+'''
+def 함수1(num) :
+    return num + 4
+
+def 함수2(num) :
+    num = num + 2
+    return 함수1(num)
+
+c = 함수2(10)
+print(c)
+
+# 출력예상결과
+16
+
+# 과정
+함수2(10)
+    num = 10 + 2 = 12
+    return 함수1(num) = 함수1(10) = 16
+'''
+
+print("-"*20)
+# 240
+'''
+def 함수0(num) :
+    return num * 2
+
+def 함수1(num) :
+    return 함수0(num + 2)
+
+def 함수2(num) :
+    num = num + 10
+    return 함수1(num)
+
+c = 함수2(2)
+print(c)
+
+# 출력예상결과
+28
+
+# 과정
+함수2(2) 
+    num = num + 10 = 2 + 10 = 12
+    return 함수1(num) = 함수1(12)
+
+함수1(12)
+   return 함수0(num + 2) = 함수0(12 + 2) = 함수0(14)
+
+함수0(14)
+    return num * 2 = 14 * 2 = 28
+'''
+
