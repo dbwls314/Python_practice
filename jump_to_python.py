@@ -177,3 +177,45 @@ numbers = [1, 2, 3, 4, 5]
 
 result = [i * 2 for i in numbers if i % 2 == 1]
 print("result :", result)
+
+# 04장 연습문제
+# 1
+def is_odd(a):
+  if a % 2 == 0:
+    return "찍수"
+  return "홀수"
+
+print(is_odd(10))
+
+# 2
+def num_average(*args):
+  result = (sum(args) / len(args))
+  return result
+
+print(num_average(1,2,3,4,5))
+
+# 3
+def num_sum():
+  input1 = input("첫번째 숫자를 입력하세요:")
+  input2 = input("두번째 숫자를 입력하세요:")
+  total = int(input1) + int(input2)
+  print("두 수의 합은 %s 입니다" % total)
+
+num_sum()
+
+# 4
+'''
+# 출력결과 다른것
+1. print("you" "need" "python")
+2. print("you"+"need"+"python")
+3. print("you", "need", "python")
+4. print("".join(["you", "need", "python"]))
+
+# 예상결과
+1,2,3 => you need. python
+4 => youneedpython
+'''
+
+print("".join(["you", "need", "python"]))
+
+
