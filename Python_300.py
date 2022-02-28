@@ -1901,3 +1901,40 @@ print(c)
     return num * 2 = 14 * 2 = 28
 '''
 
+print("-"*20)
+# 241
+import datetime
+print(datetime.datetime.now())
+
+print("-"*20)
+# 242
+print(type(datetime.datetime.now())) #<class 'datetime.datetime'>
+
+print("-"*20)
+# 243
+now_date = datetime.datetime.now().date()
+for i in range(1,6):
+    diff = now_date - (datetime.timedelta(i))
+    print(diff)
+
+# 정답
+now = datetime.datetime.now()
+
+for day in range(5, 0, -1):
+    delta = datetime.timedelta(days=day)
+    date = now - delta
+    print(date)
+
+print("-"*20)
+# 244
+# time = datetime.datetime.today().strftime("%H:%M:%S")
+# time1 = datetime.datetime.now().strftime("%H:%M:%S")
+# print(time, type(time)) # type : <class 'str'>
+# print(time1)
+
+print("-"*20)
+# 245
+today_date = '2022-02-28'
+time_type = datetime.datetime.strptime(today_date, '%Y-%m-%d')
+print(time_type, type(time_type))
+
