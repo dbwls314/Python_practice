@@ -1938,3 +1938,8 @@ today_date = '2022-02-28'
 time_type = datetime.datetime.strptime(today_date, '%Y-%m-%d')
 print(time_type, type(time_type))
 
+print("-"*20)
+# 248 -> os 모듈
+import os
+
+print(os.getcwd())
