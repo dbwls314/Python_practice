@@ -1936,10 +1936,120 @@ print("-"*20)
 # 245
 today_date = '2022-02-28'
 time_type = datetime.datetime.strptime(today_date, '%Y-%m-%d')
-print(time_type, type(time_type))
+print(time_type, type(time_type))  
+
+print("-"*20)
+# 246
+import time     # sleep 함수 사용
+import datetime # 현재 시간 출력용
+
+# for i in range(5):
+#     now = datetime.datetime.now()
+#     time.sleep(1) # time.sleept(초)
+#     print(now)
 
 print("-"*20)
 # 248 -> os 모듈
 import os
 
 print(os.getcwd())
+
+print("-"*20)
+# 252
+class Human:
+    print(1)
+    pass
+
+Human()
+
+print("-"*20)
+# 253
+class Human:
+    print(2)
+    pass
+
+areum = Human()
+
+print("-"*20)
+# 254
+class Human:
+    def __init__(self):  # 생성자
+        print("응애응애")
+
+areum = Human()
+
+print("-"*20)
+# 255
+class Human:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        print(name, age, gender)
+
+areum = Human("아름", 25, "여자")
+
+print("-"*20)
+# 256
+print("이름: " , areum.name, "나이: " , areum.age, "성별: " , areum.gender)
+# print("이름: " , areum.name)
+# print("나이: " , areum.age)
+# print("성별: " , areum.gender)
+
+print("-"*20)
+# 257
+class Human:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+    
+    def who(self):
+        print("이름:" , areum.name, "나이:" , areum.age, "성별:" , areum.gender)
+        print(f"이름: {areum.name}, 나이: {areum.age}, 성별: {areum.gender}")
+
+areum = Human("아름", 25, "여자")
+areum.who()
+
+print("-"*20)
+# 258
+class Human:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+    
+    def who(self):
+        print("이름:" , areum.name, "나이:" , areum.age, "성별:" , areum.gender)
+    
+    def setinfo(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+areum = Human("모름", 0, "모름")
+areum.who()
+areum.setinfo("아름", 25, "여자")
+areum.who()
+
+print("-"*20)
+# 259
+class Human:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+    
+    def who(self):
+        print("이름:" , areum.name, "나이:" , areum.age, "성별:" , areum.gender)
+    
+    def setinfo(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+    def __del__(self):
+        print("나의 죽음을 알리지 말라")
+
+areum = Human("아름", 25, "여자")
+del(areum)
