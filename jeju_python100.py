@@ -34,11 +34,23 @@ print(l)
 
 print('-'*20)
 
-# 1 - 3
+# 1 - 3 : list type
+l = [100, 200, 300]
+print(type(l)) # --> type : list 
 print('-'*20)
 
 # 1 - 4
+a = 1
+print(type(a)) # --> type: int
+b = 2.22
+print(type(b)) # --> type: float
+c = 'p'
+print(type(c)) # --> type: str
+d = [1,2]
+print(type(d)) # --> type: list
+
 print('-'*20)
+
 
 # 1 - 5
 print('-'*20)
