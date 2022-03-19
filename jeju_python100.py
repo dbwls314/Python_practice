@@ -99,7 +99,10 @@ print('-'*20)
 '''
 print('-'*20)
 
-# 1 - 8
+# 1 - 8 : 딕셔너리 출력값은?
+d = {'height':180,'weight':78,'weight':84,'temparture':36,'eyesight':1}
+print(d['weight']) # --> 78
+
 print('-'*20)
 
 # 1 - 9
