@@ -121,7 +121,20 @@ print(hour, minute, second, sep=":")
 
 print('-'*20)
 
-# 1 - 10
+# 1 - 10 : 별찍기
+num = int(input("숫자 입력하기 :"))
+for i in range(num+1):
+    print(" "* (num - i) + "*" * (2*i - 1))
+
+# 답안)
+num = int(input("숫자 입력하기 :"))
+for i in range(1, num+1):
+    for j in range(num+1-i): 
+        print(" ", end="")
+    for j in range(2*i-1): 
+        print('*', end="") 
+    print()
+
 print('-'*20)
 
 # 1 - 11
