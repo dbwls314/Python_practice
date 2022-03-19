@@ -69,9 +69,34 @@ a+b = 16
 print('-'*20)
 
 # 1 - 6
+for i in [None, 1, "", 0, bool(0)]:
+    print(f"{i}", i == True)
+'''
+None     # --> Bool(False)
+1        # --> Bool(True)
+""       # --> Bool(False)
+0        # --> Bool(False)
+bool(0)  # --> Bool(False)
+'''
+
 print('-'*20)
 
 # 1 - 7
+'''
+문제 : 변수명으로 올바르지 않은것
+1)  age
+2)  a
+3)  as
+4)  _age
+5)  1age
+ 
+------
+
+답 : 3)as 5)1age
+이유 : 
+3번 --> as는 예약어! 예약어는 변수 사용X
+5번 --> 숫자부터 시작하면 안됨
+'''
 print('-'*20)
 
 # 1 - 8
