@@ -101,11 +101,24 @@ print('-'*20)
 
 # 1 - 8 : 딕셔너리 출력값은?
 d = {'height':180,'weight':78,'weight':84,'temparture':36,'eyesight':1}
-print(d['weight']) # --> 78
+print(d['weight']) # --> 84
+'''
+딕셔너리 키 중복값 있을 경우, 가장 마지막 값 출력
+'''
 
 print('-'*20)
 
 # 1 - 9
+year = '2019'
+month = '04'
+day = '26'
+hour = '11'
+minute = '34'
+second = '27'
+
+print(year, month, day, sep="/", end=" ")
+print(hour, minute, second, sep=":")
+
 print('-'*20)
 
 # 1 - 10
